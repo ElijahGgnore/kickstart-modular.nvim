@@ -25,7 +25,7 @@ return {
       taskwarrior:toggle()
     end
 
-    vim.api.nvim_set_keymap('n', '<leader>g', '<cmd>lua _Lazygit_toggle()<CR>', { noremap = true, silent = true, desc = 'Lazy[g]it' })
+    vim.api.nvim_set_keymap('n', '<leader>gg', '<cmd>lua _Lazygit_toggle()<CR>', { noremap = true, silent = true, desc = 'Lazy[g]it' })
     vim.api.nvim_set_keymap('n', '<leader>W', '<cmd>lua _Taskwarrior_toggle()<CR>', { noremap = true, silent = true, desc = 'Task[W]arrior-tui' })
   end,
   opts = {
