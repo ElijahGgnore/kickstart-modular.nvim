@@ -46,13 +46,13 @@ return {
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "[p]rojects" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "[r]ecent" },
     -- git
-    { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git [b]ranches" },
-    { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git [l]og" },
-    { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git [L]og Line" },
-    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git [s]tatus" },
-    { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git [S]tash" },
-    { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git [d]iff (Hunks)" },
-    { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log [f]ile" },
+    -- { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git [b]ranches" },
+    -- { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git [l]og" },
+    -- { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git [L]og Line" },
+    -- { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git [s]tatus" },
+    -- { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git [S]tash" },
+    -- { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git [d]iff (Hunks)" },
+    -- { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log [f]ile" },
     -- Grep
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "[b]uffer Lines" },
     { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open [B]uffers" },
@@ -94,7 +94,7 @@ return {
     { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
     { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select [S]cratch Buffer" },
     { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "[n]otification History" },
-    { "<leader>bd", function() Snacks.bufdelete() end, desc = "[D]elete Buffer" },
+    { "<leader>bD", function() Snacks.bufdelete() end, desc = "[D]elete Buffer" },
     { "<leader>fR", function() Snacks.rename.rename_file() end, desc = "[R]ename File" },
     -- { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git [B]rowse", mode = { "n", "v" } },
     -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazy[g]it" },
@@ -132,9 +132,6 @@ return {
           Snacks.debug.backtrace()
         end
         vim.print = _G.dd -- Override print to use snacks for `:=` command
-
-        -- Enable diming on startup
-        Snacks.dim.enable()
 
         -- Create some toggle mappings
         Snacks.toggle.option('spell', { name = 'Spelling' }):map '<leader>ts'
