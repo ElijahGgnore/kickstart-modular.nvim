@@ -15,14 +15,16 @@ return {
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
+
       indent = { enable = true, disable = { 'ruby' } },
+
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = 'gnn',
-          node_incremental = 'grn',
-          scope_incremental = 'grc',
-          node_decremental = 'grm',
+          init_selection = '<CR>',
+          scope_incremental = '<TAB>',
+          node_incremental = '<CR>',
+          node_decremental = '<S-CR>',
         },
       },
       textobjects = {
