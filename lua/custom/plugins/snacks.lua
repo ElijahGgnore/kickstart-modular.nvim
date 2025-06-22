@@ -16,7 +16,7 @@ return {
     picker = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
-    scroll = { enabled = false },
+    scroll = { enabled = vim.fn.has 'gui_running' == 0 and true or false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
     lazygit = { enabled = false },
