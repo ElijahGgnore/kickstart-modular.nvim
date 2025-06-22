@@ -19,7 +19,7 @@ return {
     scroll = { enabled = vim.fn.has 'gui_running' == 0 and true or false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    lazygit = { enabled = false },
+    lazygit = { enabled = true },
     terminal = { enabled = false },
     dim = { enabled = true },
     -- styles = {
@@ -97,7 +97,7 @@ return {
     { "<leader>bD", function() Snacks.bufdelete() end, desc = "[D]elete Buffer" },
     { "<leader>fR", function() Snacks.rename.rename_file() end, desc = "[R]ename File" },
     -- { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git [B]rowse", mode = { "n", "v" } },
-    -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazy[g]it" },
+    { "<leader>gl", function() Snacks.lazygit() end, desc = "[g]it [l]azygit" },
     { "<leader>on", function() Snacks.notifier.hide() end, desc = "Dismiss All [n]otifications" },
     { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
     { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
