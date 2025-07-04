@@ -82,6 +82,10 @@ return {
 
           map('<leader>lw', '<cmd>LspClangdSwitchSourceHeader<CR>', 'Clangd s[w]itch to source/header')
 
+          map('<leader>lF', function()
+            vim.lsp.buf.format { async = true }
+          end, '[l]SP [F]ormat buffer')
+
           -- Find references for the word under your cursor.
           -- map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
