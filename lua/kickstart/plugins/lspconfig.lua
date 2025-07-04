@@ -80,6 +80,8 @@ return {
           -- or a suggestion from your LSP for this to activate.
           map('<leader>la', vim.lsp.buf.code_action, '[a]ction', { 'n', 'x' })
 
+          map('<leader>lw', '<cmd>LspClangdSwitchSourceHeader<CR>', 'Clangd s[w]itch to source/header')
+
           -- Find references for the word under your cursor.
           -- map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
@@ -233,6 +235,8 @@ return {
         },
 
         marksman = {},
+
+        neocmake = {},
       }
 
       -- Ensure the servers and tools above are installed
