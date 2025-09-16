@@ -17,7 +17,7 @@ return {
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = vim.fn.has 'gui_running' == 0 and true or false },
-    statuscolumn = { enabled = true },
+    statuscolumn = { enabled = false },
     words = { enabled = true },
     lazygit = { enabled = true },
     terminal = { enabled = false },
