@@ -10,6 +10,8 @@ vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 require 'options'
 
+require 'russian-english-langmap'
+
 -- [[ Basic Keymaps ]]
 require 'keymaps'
 
