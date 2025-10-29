@@ -37,7 +37,7 @@ return {
     { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "[n]otification History" },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File [e]xplorer" },
+    -- { "<leader>e", function() Snacks.explorer() end, desc = "File [e]xplorer" },
     -- find
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "[b]uffers" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find [c]onfig File" },
