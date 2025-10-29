@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   'folke/persistence.nvim',
   config = function()
     local p = require 'persistence'
