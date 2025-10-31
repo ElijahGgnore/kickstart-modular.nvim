@@ -51,4 +51,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Instead of indenting, insert an actual tab when <tab> is pressed.
+-- To indent, use CTRL-T and CTRL-D in the insert mode
+--  or >> and << in the normal mode
+vim.keymap.set('i', '<tab>', '<c-v><tab>', { noremap = true })
+
 -- vim: ts=2 sts=2 sw=2 et
