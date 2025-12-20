@@ -241,6 +241,7 @@ return {
         bashls = {},
       }
 
+      vim.lsp.enable 'texlab'
 
       -- The following loop will configure each server with the capabilities we defined above.
       -- This will ensure that all servers have the same base configuration, but also
