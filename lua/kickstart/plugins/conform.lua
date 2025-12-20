@@ -37,6 +37,7 @@ return {
         markdown = { 'prettierd', 'prettier', stop_after_first = true },
 
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        tex = { 'tex-fmt' },
 
         json = { 'prettierd', 'prettier', stop_after_first = true },
         jsonc = { 'prettierd', 'prettier', stop_after_first = true },
