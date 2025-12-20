@@ -239,6 +239,16 @@ return {
         neocmake = {},
 
         bashls = {},
+
+        jdtls = {
+          init_options = {
+            bundles = {
+              vim.fn.glob(vim.fn.stdpath 'data' .. '/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar', true),
+            },
+          },
+        },
+
+        ts_ls = {},
       }
 
       vim.lsp.enable 'texlab'
