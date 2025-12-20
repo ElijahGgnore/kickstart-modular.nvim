@@ -50,4 +50,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --  or >> and << in the normal mode
 vim.keymap.set('i', '<tab>', '<c-v><tab>', { noremap = true })
 
+vim.keymap.set('n', '<leader>bF', ':filetype detect<CR>', { noremap = true })
+
 -- vim: ts=2 sts=2 sw=2 et
