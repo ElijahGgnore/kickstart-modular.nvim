@@ -7,7 +7,7 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         python = { 'ruff' },
-        markdown = { 'markdownlint' },
+        markdown = { 'markdownlint-cli2' },
 
         htmldjango = { 'djlint' },
       }
