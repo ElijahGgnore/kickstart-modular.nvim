@@ -133,6 +133,15 @@ return {
         vim.print = _G.dd -- Override print to use snacks for `:=` command
 
         -- Create some toggle mappings
+        Snacks.toggle({
+          name = 'Format on save',
+          get = function()
+            return not vim.b.disable_autoformat
+          end,
+          set = function(state)
+            vim.b.disable_autoformat = not state
+          end,
+        }):map '<leader>tf'
         Snacks.toggle.option('spell', { name = 'Spelling' }):map '<leader>ts'
         Snacks.toggle.option('wrap', { name = 'Wrap' }):map '<leader>tw'
         Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):map '<leader>tL'
