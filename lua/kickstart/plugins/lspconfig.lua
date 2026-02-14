@@ -208,9 +208,10 @@ return {
       local servers = {
         clangd = {}, -- c/c++
 
+        ty = {},     -- python
+
         taplo = {},  -- TOML
         -- gopls = {},
-        basedpyright = {},
 
         html = {},
         cssls = {},
