@@ -208,6 +208,7 @@ return {
       local servers = {
         clangd = {}, -- c/c++
 
+        taplo = {},  -- TOML
         -- gopls = {},
         basedpyright = {},
         -- rust_analyzer = {},
