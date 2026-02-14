@@ -260,8 +260,6 @@ return {
             },
           },
         },
-
-        ts_ls = {},
       }
 
       -- The following loop will configure each server with the capabilities we defined above.
