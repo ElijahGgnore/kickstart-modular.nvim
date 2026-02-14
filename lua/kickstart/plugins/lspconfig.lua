@@ -243,7 +243,9 @@ return {
         jdtls = {
           init_options = {
             bundles = {
-              vim.fn.glob(vim.fn.stdpath 'data' .. '/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar', true),
+              vim.fn.glob(
+                vim.fn.stdpath 'data' ..
+                '/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar', true),
             },
           },
         },
