@@ -3,7 +3,6 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- text below applies for VimScript
 vim.o.guifont = 'Hack Nerd Font:h16'
 
 -- Make line numbers default
