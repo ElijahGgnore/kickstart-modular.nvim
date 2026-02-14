@@ -25,6 +25,9 @@ vim.o.showmode = false
 --   vim.o.clipboard = 'unnamedplus'
 -- end)
 
+-- Use spaces for indentation by default.
+vim.o.expandtab = true
+
 -- Enable break indent
 vim.o.breakindent = true
 
