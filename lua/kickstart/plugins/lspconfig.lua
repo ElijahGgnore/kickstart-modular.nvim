@@ -218,6 +218,8 @@ return {
         json = {},
         denols = {}, -- javascript
 
+        texlab = {}, -- latex
+
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -261,8 +263,6 @@ return {
 
         ts_ls = {},
       }
-
-      vim.lsp.enable 'texlab'
 
       -- The following loop will configure each server with the capabilities we defined above.
       -- This will ensure that all servers have the same base configuration, but also
