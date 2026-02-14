@@ -1,0 +1,10 @@
+bash-language-server
+deno
+lua-language-server
+markdownlint-cli2
+taplo-cli
+texlab
+ty
+vscode-css-languageserver
+vscode-html-languageserver
+vscode-json-languageserver
