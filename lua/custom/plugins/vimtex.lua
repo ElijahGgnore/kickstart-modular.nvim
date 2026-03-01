@@ -5,6 +5,8 @@ return {
   init = function()
     vim.g.vimtex_mappings_prefix = '<localleader>v'
     vim.g.vimtex_mappings_disable = { ['n'] = { 'K' } }
+
+    vim.g.vimtex_compiler_latexmk = { aux_dir = '.aux.tex' }
     -- vim.api.nvim_create_autocmd('FileType', {
     --   pattern = 'tex',
     --   callback = function()
