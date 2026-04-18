@@ -52,6 +52,7 @@ yay -S --needed - < pkglist-aur.txt
 | lua         | stylua      |
 | markdown    | prettierd   |
 | xml         | prettierd   |
+| python      | ruff        |
 
 ### Linters
 

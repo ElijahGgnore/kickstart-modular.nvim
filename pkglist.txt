@@ -2,6 +2,7 @@ bash-language-server
 deno
 lua-language-server
 markdownlint-cli2
+ruff
 taplo-cli
 texlab
 tree-sitter-cli
