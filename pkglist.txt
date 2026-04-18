@@ -4,6 +4,7 @@ lua-language-server
 markdownlint-cli2
 taplo-cli
 texlab
+tree-sitter-cli
 ty
 vscode-css-languageserver
 vscode-html-languageserver
