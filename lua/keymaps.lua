@@ -52,4 +52,33 @@ vim.keymap.set('i', '<tab>', '<c-v><tab>', { noremap = true })
 
 vim.keymap.set('n', '<leader>bF', ':filetype detect<CR>', { noremap = true })
 
+-- Incremental selection.
+-- Since the default mappings are not builtin and cannot be easily
+-- mapped to, the functionality they call was copied from
+-- /usr/share/nvim/runtime/lua/vim/_core/defaults.lua for these new
+-- mappings to work
+do
+  local select_parent_desc = 'Select parent (outer) node'
+  local select_child_desc = 'Select child (inner) node'
+  local select_parent_mapping = '<CR>'
+  local select_child_mapping = '<BS>'
+
+  vim.keymap.set({ 'o', 'x' }, select_parent_mapping, function()
+    if vim.treesitter.get_parser(nil, nil, { error = false }) then
+      require 'vim.treesitter._select'.select_parent(vim.v.count1)
+    else
+      vim.lsp.buf.selection_range(vim.v.count1)
+    end
+  end, { desc = select_parent_desc })
+
+  vim.keymap.set({ 'o', 'x' }, select_child_mapping, function()
+    if vim.treesitter.get_parser(nil, nil, { error = false }) then
+      require 'vim.treesitter._select'.select_child(vim.v.count1)
+    else
+      vim.lsp.buf.selection_range(-vim.v.count1)
+    end
+  end, { desc = select_child_desc })
+
+  vim.keymap.set('n', select_parent_mapping, 'v' .. select_parent_mapping, { remap = true, desc = select_parent_desc })
+end
 -- vim: ts=2 sts=2 sw=2 et
